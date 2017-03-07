@@ -48,12 +48,12 @@
 
 // 要动态添加的方法
  void runAddMethod(id self, SEL _cmd, NSString *string) {
-     NSLog(@"add IMP");
+     NSLog(@"动态添加一个方法来提示");
 }
 
 // 输出类的一些信息
 - (void)logInfo {
-    unsigned int count;
+    unsigned int count;// 用于记录列表内的数量，进行循环输出
     
     // 获取属性列表
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
